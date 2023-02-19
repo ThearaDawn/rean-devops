@@ -1,0 +1,23 @@
+
+
+1. docker build -t image-name.
+2. docker tag image-name theara1011from93kpc/dev:image-name
+3. docker push theara1011from93kpc/dev:image-name
+4. docker pull theara1011from93kpc/dev:image-name
+5.0 docker run repo-url or image_id
+5.1 docker run --name redis-staging -d -p 6389:6379 image_id
+5.2 docker run -d -p 8008:8008 -v /home/tomcat/logs:/logs --name redis-staging --restart always repo-url
+6.0 docker ps
+6.1 docker ps -a
+6.2 docker ps -aq   = get all docker container
+7.0. docker logs -f container_id (check docker logs real time :D)
+7.1. docker logs --since 2023-01-20T10:00:00 container_id (check docker logs specify date)
+
+8. docker cp image_id:/java.jar /home/app/java.jar (copy jar file from docker)
+9. docker start container_id
+10. docker stop container_id
+11. docker rm container_id container_id
+12. docker rmi image_idc
+13. docker rmi -f image_id
+14. docker start (docker ps -aq)
+15. docker exec -it
